@@ -1,0 +1,6 @@
+framework module ClassExtension {
+  umbrella header "ClassExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

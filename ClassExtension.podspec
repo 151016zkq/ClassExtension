@@ -32,6 +32,12 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ClassExtension/Classes/**/*'
   
+  
+  s.dependency 'RxSwift', '~> 5.0'
+  s.dependency 'RxCocoa', '~> 5.0'
+  s.dependency 'KakaJSON', '~> 1.1.2'
+  s.dependency 'MJRefresh', '~> 3.1.15.3'
+
   # s.resource_bundles = {
   #   'ClassExtension' => ['ClassExtension/Assets/*.png']
   # }
