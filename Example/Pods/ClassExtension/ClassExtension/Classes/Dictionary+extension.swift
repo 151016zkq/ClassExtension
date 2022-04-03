@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public extension Dictionary {
+extension Dictionary {
     ///字典转换成字符串
-    func toJsonString() -> String? {
+    public func toJsonString() -> String? {
         guard let data = try? JSONSerialization.data(withJSONObject: self,
                                                      options: []) else {
             return nil
@@ -18,9 +18,9 @@ public extension Dictionary {
             return nil
         }
         return str
-    }
-    
-    func toData() -> Data? {
+     }
+
+    public func toData() -> Data? {
         if JSONSerialization.isValidJSONObject(self) {
             let data = try? JSONSerialization.data(withJSONObject: self, options: [])
             return data
@@ -28,5 +28,5 @@ public extension Dictionary {
             return nil
         }
     }
-    
+
 }

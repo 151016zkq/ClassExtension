@@ -7,8 +7,8 @@
 //
 
 import Foundation
-public extension Data {
-    func asDict() -> [String: Any]? {
+extension Data {
+    public func asDict() -> [String: Any]? {
         if let dic = try? JSONSerialization.jsonObject(with: self,
                            options: .mutableContainers) as? [String : Any] {
 

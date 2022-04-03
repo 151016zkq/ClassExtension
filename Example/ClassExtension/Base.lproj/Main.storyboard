@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ClassExtension_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -20,11 +19,41 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="bQt-mf-FYg">
+                                <rect key="frame" x="16" y="63" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="VYc-n2-waR"/>
+                                    <constraint firstAttribute="height" constant="343" id="XAa-qD-UOj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-Ve-tpA">
+                                <rect key="frame" x="87.5" y="416" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LCK-9z-2ae"/>
+                                    <constraint firstAttribute="width" constant="200" id="VtX-DI-Vqm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jYv-Ve-tpA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1LV-8z-tUq"/>
+                            <constraint firstItem="bQt-mf-FYg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="63" id="BT3-VI-kf5"/>
+                            <constraint firstItem="jYv-Ve-tpA" firstAttribute="top" secondItem="bQt-mf-FYg" secondAttribute="bottom" constant="10" id="G1M-zQ-yMK"/>
+                            <constraint firstItem="bQt-mf-FYg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="P3x-J7-4gC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bQt-mf-FYg" secondAttribute="trailing" id="Y4F-dd-3VI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image1" destination="bQt-mf-FYg" id="fNg-GZ-BPU"/>
+                        <outlet property="image2" destination="jYv-Ve-tpA" id="ta0-2G-IJd"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="127" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="550" height="550"/>
+    </resources>
 </document>

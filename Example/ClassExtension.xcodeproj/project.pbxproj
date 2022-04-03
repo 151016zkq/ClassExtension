@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		03138075ADD8D64719363386 /* Pods-ClassExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-ClassExtension_Tests/Pods-ClassExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		17136AB29352C6B0558E9306 /* ClassExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ClassExtension.podspec; path = ../ClassExtension.podspec; sourceTree = "<group>"; };
+		17136AB29352C6B0558E9306 /* ClassExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ClassExtension.podspec; path = ../ClassExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		21C5B80EF37EDE29A18D7F8B /* Pods_ClassExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClassExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E217CD78F77F1F70402E755 /* Pods-ClassExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-ClassExtension_Example/Pods-ClassExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		38BC37990863047310F3C6C5 /* Pods-ClassExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-ClassExtension_Example/Pods-ClassExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		607FACE51AFB9204008FA782 /* ClassExtension_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassExtension_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		72020B38A88CB7428443212E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		72020B38A88CB7428443212E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7696A696653C47307639D12C /* Pods-ClassExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ClassExtension_Tests/Pods-ClassExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD3A3A9E99D32E3C360AC4DC /* Pods_ClassExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClassExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBB0252DF9A14EE35B8C40F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EBB0252DF9A14EE35B8C40F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				7696A696653C47307639D12C /* Pods-ClassExtension_Tests.debug.xcconfig */,
 				03138075ADD8D64719363386 /* Pods-ClassExtension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -290,22 +290,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ClassExtension_Example/Pods-ClassExtension_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ClassExtension/ClassExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/KakaJSON/KakaJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClassExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KakaJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

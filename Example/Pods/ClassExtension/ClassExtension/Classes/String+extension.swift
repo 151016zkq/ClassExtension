@@ -42,13 +42,11 @@ public extension String {
     
     ///解码
 //    func aesDecrypt(key: String) throws -> [String: String]? {
-//        let key = "4974949650676986"
+        //        let key = "4974949650676986"
 //        let iv = key
-//        let str = "uLjChSYtNCkPYkKV9kmkP5GCA/rAbHHCWRWaVxQC36VrX/voRhvV1RhVNGq1lHBR4Wb7uzU97DMT3qe4rSIVNQ=="
+//        //        let str = "uLjChSYtNCkPYkKV9kmkP5GCA/rAbHHCWRWaVxQC36VrX/voRhvV1RhVNGq1lHBR4Wb7uzU97DMT3qe4rSIVNQ=="
 //        let data1 = self.data(using: String.Encoding.utf8)!
 //        let data = Data(base64Encoded: data1)!
-//
-//        AES.init(key: key, iv: iv, padding: .pkcs7).decrypt(<#T##bytes: ArraySlice<UInt8>##ArraySlice<UInt8>#>)
 //
 //        let decrypted = try! AES(key: key, iv: iv, blockMode: .CBC, padding: .pkcs7).decrypt([UInt8](data))
 //        let decryptedData = Data(decrypted)
@@ -64,7 +62,7 @@ public extension String {
 //        } catch {
 //            return nil
 //        }
-//
+        
 //    }
     ///MARK: Unicode转中文
     var unicodeStr:String {

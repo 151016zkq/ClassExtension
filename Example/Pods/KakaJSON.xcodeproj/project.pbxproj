@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9D90D00000470 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D90D00000460 /* Foundation.framework */; };
+		D9D90D00000480 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000000C0 /* Convertible.swift */; };
+		D9D90D00000490 /* ConvertibleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000000D0 /* ConvertibleConfig.swift */; };
+		D9D90D000004A0 /* ConvertibleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000000E0 /* ConvertibleEnum.swift */; };
+		D9D90D000004B0 /* KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000000F0 /* KJ.swift */; };
+		D9D90D000004C0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000100 /* Logger.swift */; };
+		D9D90D000004D0 /* TypeProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000110 /* TypeProxy.swift */; };
+		D9D90D000004E0 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000120 /* Values.swift */; };
+		D9D90D000004F0 /* Array+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000130 /* Array+KJ.swift */; };
+		D9D90D00000500 /* Data+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000140 /* Data+KJ.swift */; };
+		D9D90D00000510 /* Dictionary+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000150 /* Dictionary+KJ.swift */; };
+		D9D90D00000520 /* JSONSerialization+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000160 /* JSONSerialization+KJ.swift */; };
+		D9D90D00000530 /* NSObject+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000170 /* NSObject+KJ.swift */; };
+		D9D90D00000540 /* Optional+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000180 /* Optional+KJ.swift */; };
+		D9D90D00000550 /* Pointer+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000190 /* Pointer+KJ.swift */; };
+		D9D90D00000560 /* String+KJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001A0 /* String+KJ.swift */; };
+		D9D90D00000570 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001B0 /* Coding.swift */; };
+		D9D90D00000580 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001C0 /* JSON.swift */; };
+		D9D90D00000590 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001D0 /* Model.swift */; };
+		D9D90D000005A0 /* ClassDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001E0 /* ClassDescriptor.swift */; };
+		D9D90D000005B0 /* Descriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000001F0 /* Descriptor.swift */; };
+		D9D90D000005C0 /* EnumDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000200 /* EnumDescriptor.swift */; };
+		D9D90D000005D0 /* FieldDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000210 /* FieldDescriptor.swift */; };
+		D9D90D000005E0 /* StructDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000220 /* StructDescriptor.swift */; };
+		D9D90D000005F0 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000230 /* BaseLayout.swift */; };
+		D9D90D00000600 /* ClassLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000240 /* ClassLayout.swift */; };
+		D9D90D00000610 /* EnumLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000250 /* EnumLayout.swift */; };
+		D9D90D00000620 /* FieldList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000260 /* FieldList.swift */; };
+		D9D90D00000630 /* FunctionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000270 /* FunctionLayout.swift */; };
+		D9D90D00000640 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000280 /* Layout.swift */; };
+		D9D90D00000650 /* ProtocolLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000290 /* ProtocolLayout.swift */; };
+		D9D90D00000660 /* StructLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002A0 /* StructLayout.swift */; };
+		D9D90D00000670 /* TupleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002B0 /* TupleLayout.swift */; };
+		D9D90D00000680 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002C0 /* Metadata.swift */; };
+		D9D90D00000690 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002D0 /* Property.swift */; };
+		D9D90D000006A0 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002E0 /* BaseType.swift */; };
+		D9D90D000006B0 /* ClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000002F0 /* ClassType.swift */; };
+		D9D90D000006C0 /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000300 /* EnumType.swift */; };
+		D9D90D000006D0 /* ForeignClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000310 /* ForeignClassType.swift */; };
+		D9D90D000006E0 /* FunctionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000320 /* FunctionType.swift */; };
+		D9D90D000006F0 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000330 /* Kind.swift */; };
+		D9D90D00000700 /* MetaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000340 /* MetaType.swift */; };
+		D9D90D00000710 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000350 /* ModelType.swift */; };
+		D9D90D00000720 /* ObjCClassType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000360 /* ObjCClassType.swift */; };
+		D9D90D00000730 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000370 /* OptionalType.swift */; };
+		D9D90D00000740 /* ProtocolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000380 /* ProtocolType.swift */; };
+		D9D90D00000750 /* StructType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000390 /* StructType.swift */; };
+		D9D90D00000760 /* TupleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000003A0 /* TupleType.swift */; };
+		D9D90D00000770 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D000003B0 /* Type.swift */; };
+		D9D90D000007D0 /* KakaJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D90D000007C0 /* KakaJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9D90D00000810 /* KakaJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D90D00000800 /* KakaJSON-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		027F02060C0F3AF572FFE431F4A1DAA3 /* KakaJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaJSON; path = KakaJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D90D000000C0 /* Convertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Convertible.swift; path = Sources/KakaJSON/Convert/Convertible.swift; sourceTree = "<group>"; };
+		D9D90D000000D0 /* ConvertibleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConvertibleConfig.swift; path = Sources/KakaJSON/Convert/ConvertibleConfig.swift; sourceTree = "<group>"; };
+		D9D90D000000E0 /* ConvertibleEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConvertibleEnum.swift; path = Sources/KakaJSON/Convert/ConvertibleEnum.swift; sourceTree = "<group>"; };
+		D9D90D000000F0 /* KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KJ.swift; path = Sources/KakaJSON/Convert/KJ.swift; sourceTree = "<group>"; };
+		D9D90D00000100 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/KakaJSON/Convert/Logger.swift; sourceTree = "<group>"; };
+		D9D90D00000110 /* TypeProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeProxy.swift; path = Sources/KakaJSON/Convert/TypeProxy.swift; sourceTree = "<group>"; };
+		D9D90D00000120 /* Values.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Values.swift; path = Sources/KakaJSON/Convert/Values.swift; sourceTree = "<group>"; };
+		D9D90D00000130 /* Array+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+KJ.swift"; path = "Sources/KakaJSON/Extension/Array+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000140 /* Data+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+KJ.swift"; path = "Sources/KakaJSON/Extension/Data+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000150 /* Dictionary+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+KJ.swift"; path = "Sources/KakaJSON/Extension/Dictionary+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000160 /* JSONSerialization+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONSerialization+KJ.swift"; path = "Sources/KakaJSON/Extension/JSONSerialization+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000170 /* NSObject+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+KJ.swift"; path = "Sources/KakaJSON/Extension/NSObject+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000180 /* Optional+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+KJ.swift"; path = "Sources/KakaJSON/Extension/Optional+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D00000190 /* Pointer+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Pointer+KJ.swift"; path = "Sources/KakaJSON/Extension/Pointer+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D000001A0 /* String+KJ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+KJ.swift"; path = "Sources/KakaJSON/Extension/String+KJ.swift"; sourceTree = "<group>"; };
+		D9D90D000001B0 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/KakaJSON/Global/Coding.swift; sourceTree = "<group>"; };
+		D9D90D000001C0 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/KakaJSON/Global/JSON.swift; sourceTree = "<group>"; };
+		D9D90D000001D0 /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Sources/KakaJSON/Global/Model.swift; sourceTree = "<group>"; };
+		D9D90D000001E0 /* ClassDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClassDescriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/ClassDescriptor.swift; sourceTree = "<group>"; };
+		D9D90D000001F0 /* Descriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Descriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/Descriptor.swift; sourceTree = "<group>"; };
+		D9D90D00000200 /* EnumDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumDescriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/EnumDescriptor.swift; sourceTree = "<group>"; };
+		D9D90D00000210 /* FieldDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldDescriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/FieldDescriptor.swift; sourceTree = "<group>"; };
+		D9D90D00000220 /* StructDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StructDescriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/StructDescriptor.swift; sourceTree = "<group>"; };
+		D9D90D00000230 /* BaseLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseLayout.swift; path = Sources/KakaJSON/Metadata/Layout/BaseLayout.swift; sourceTree = "<group>"; };
+		D9D90D00000240 /* ClassLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClassLayout.swift; path = Sources/KakaJSON/Metadata/Layout/ClassLayout.swift; sourceTree = "<group>"; };
+		D9D90D00000250 /* EnumLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumLayout.swift; path = Sources/KakaJSON/Metadata/Layout/EnumLayout.swift; sourceTree = "<group>"; };
+		D9D90D00000260 /* FieldList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldList.swift; path = Sources/KakaJSON/Metadata/Layout/FieldList.swift; sourceTree = "<group>"; };
+		D9D90D00000270 /* FunctionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionLayout.swift; path = Sources/KakaJSON/Metadata/Layout/FunctionLayout.swift; sourceTree = "<group>"; };
+		D9D90D00000280 /* Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Sources/KakaJSON/Metadata/Layout/Layout.swift; sourceTree = "<group>"; };
+		D9D90D00000290 /* ProtocolLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProtocolLayout.swift; path = Sources/KakaJSON/Metadata/Layout/ProtocolLayout.swift; sourceTree = "<group>"; };
+		D9D90D000002A0 /* StructLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StructLayout.swift; path = Sources/KakaJSON/Metadata/Layout/StructLayout.swift; sourceTree = "<group>"; };
+		D9D90D000002B0 /* TupleLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TupleLayout.swift; path = Sources/KakaJSON/Metadata/Layout/TupleLayout.swift; sourceTree = "<group>"; };
+		D9D90D000002C0 /* Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = Sources/KakaJSON/Metadata/Metadata.swift; sourceTree = "<group>"; };
+		D9D90D000002D0 /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Sources/KakaJSON/Metadata/Property.swift; sourceTree = "<group>"; };
+		D9D90D000002E0 /* BaseType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseType.swift; path = Sources/KakaJSON/Metadata/Type/BaseType.swift; sourceTree = "<group>"; };
+		D9D90D000002F0 /* ClassType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClassType.swift; path = Sources/KakaJSON/Metadata/Type/ClassType.swift; sourceTree = "<group>"; };
+		D9D90D00000300 /* EnumType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumType.swift; path = Sources/KakaJSON/Metadata/Type/EnumType.swift; sourceTree = "<group>"; };
+		D9D90D00000310 /* ForeignClassType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ForeignClassType.swift; path = Sources/KakaJSON/Metadata/Type/ForeignClassType.swift; sourceTree = "<group>"; };
+		D9D90D00000320 /* FunctionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctionType.swift; path = Sources/KakaJSON/Metadata/Type/FunctionType.swift; sourceTree = "<group>"; };
+		D9D90D00000330 /* Kind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kind.swift; path = Sources/KakaJSON/Metadata/Type/Kind.swift; sourceTree = "<group>"; };
+		D9D90D00000340 /* MetaType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaType.swift; path = Sources/KakaJSON/Metadata/Type/MetaType.swift; sourceTree = "<group>"; };
+		D9D90D00000350 /* ModelType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModelType.swift; path = Sources/KakaJSON/Metadata/Type/ModelType.swift; sourceTree = "<group>"; };
+		D9D90D00000360 /* ObjCClassType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCClassType.swift; path = Sources/KakaJSON/Metadata/Type/ObjCClassType.swift; sourceTree = "<group>"; };
+		D9D90D00000370 /* OptionalType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalType.swift; path = Sources/KakaJSON/Metadata/Type/OptionalType.swift; sourceTree = "<group>"; };
+		D9D90D00000380 /* ProtocolType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProtocolType.swift; path = Sources/KakaJSON/Metadata/Type/ProtocolType.swift; sourceTree = "<group>"; };
+		D9D90D00000390 /* StructType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StructType.swift; path = Sources/KakaJSON/Metadata/Type/StructType.swift; sourceTree = "<group>"; };
+		D9D90D000003A0 /* TupleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TupleType.swift; path = Sources/KakaJSON/Metadata/Type/TupleType.swift; sourceTree = "<group>"; };
+		D9D90D000003B0 /* Type.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Type.swift; path = Sources/KakaJSON/Metadata/Type/Type.swift; sourceTree = "<group>"; };
+		D9D90D00000460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D9D90D00000790 /* KakaJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaJSON.debug.xcconfig; sourceTree = "<group>"; };
+		D9D90D000007A0 /* KakaJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaJSON.release.xcconfig; sourceTree = "<group>"; };
+		D9D90D000007B0 /* KakaJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaJSON.modulemap; sourceTree = "<group>"; };
+		D9D90D000007C0 /* KakaJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaJSON-umbrella.h"; sourceTree = "<group>"; };
+		D9D90D000007E0 /* KakaJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaJSON-Info.plist"; sourceTree = "<group>"; };
+		D9D90D000007F0 /* KakaJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KakaJSON-prefix.pch"; sourceTree = "<group>"; };
+		D9D90D00000800 /* KakaJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KakaJSON-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9D90D00000430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D90D00000470 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9D90D00000010 = {
+			isa = PBXGroup;
+			children = (
+				D9D90D00000060 /* Frameworks */,
+				D9D90D000000B0 /* KakaJSON */,
+				D9D90D00000020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9D90D00000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				027F02060C0F3AF572FFE431F4A1DAA3 /* KakaJSON */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9D90D00000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9D90D00000450 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9D90D000000B0 /* KakaJSON */ = {
+			isa = PBXGroup;
+			children = (
+				D9D90D00000130 /* Array+KJ.swift */,
+				D9D90D00000230 /* BaseLayout.swift */,
+				D9D90D000002E0 /* BaseType.swift */,
+				D9D90D000001E0 /* ClassDescriptor.swift */,
+				D9D90D00000240 /* ClassLayout.swift */,
+				D9D90D000002F0 /* ClassType.swift */,
+				D9D90D000001B0 /* Coding.swift */,
+				D9D90D000000C0 /* Convertible.swift */,
+				D9D90D000000D0 /* ConvertibleConfig.swift */,
+				D9D90D000000E0 /* ConvertibleEnum.swift */,
+				D9D90D00000140 /* Data+KJ.swift */,
+				D9D90D000001F0 /* Descriptor.swift */,
+				D9D90D00000150 /* Dictionary+KJ.swift */,
+				D9D90D00000200 /* EnumDescriptor.swift */,
+				D9D90D00000250 /* EnumLayout.swift */,
+				D9D90D00000300 /* EnumType.swift */,
+				D9D90D00000210 /* FieldDescriptor.swift */,
+				D9D90D00000260 /* FieldList.swift */,
+				D9D90D00000310 /* ForeignClassType.swift */,
+				D9D90D00000270 /* FunctionLayout.swift */,
+				D9D90D00000320 /* FunctionType.swift */,
+				D9D90D000001C0 /* JSON.swift */,
+				D9D90D00000160 /* JSONSerialization+KJ.swift */,
+				D9D90D00000330 /* Kind.swift */,
+				D9D90D000000F0 /* KJ.swift */,
+				D9D90D00000280 /* Layout.swift */,
+				D9D90D00000100 /* Logger.swift */,
+				D9D90D000002C0 /* Metadata.swift */,
+				D9D90D00000340 /* MetaType.swift */,
+				D9D90D000001D0 /* Model.swift */,
+				D9D90D00000350 /* ModelType.swift */,
+				D9D90D00000170 /* NSObject+KJ.swift */,
+				D9D90D00000360 /* ObjCClassType.swift */,
+				D9D90D00000180 /* Optional+KJ.swift */,
+				D9D90D00000370 /* OptionalType.swift */,
+				D9D90D00000190 /* Pointer+KJ.swift */,
+				D9D90D000002D0 /* Property.swift */,
+				D9D90D00000290 /* ProtocolLayout.swift */,
+				D9D90D00000380 /* ProtocolType.swift */,
+				D9D90D000001A0 /* String+KJ.swift */,
+				D9D90D00000220 /* StructDescriptor.swift */,
+				D9D90D000002A0 /* StructLayout.swift */,
+				D9D90D00000390 /* StructType.swift */,
+				D9D90D000002B0 /* TupleLayout.swift */,
+				D9D90D000003A0 /* TupleType.swift */,
+				D9D90D000003B0 /* Type.swift */,
+				D9D90D00000110 /* TypeProxy.swift */,
+				D9D90D00000120 /* Values.swift */,
+				D9D90D00000780 /* Support Files */,
+			);
+			name = KakaJSON;
+			path = KakaJSON;
+			sourceTree = "<group>";
+		};
+		D9D90D00000450 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D9D90D00000460 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D9D90D00000780 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9D90D000007B0 /* KakaJSON.modulemap */,
+				D9D90D00000800 /* KakaJSON-dummy.m */,
+				D9D90D000007E0 /* KakaJSON-Info.plist */,
+				D9D90D000007F0 /* KakaJSON-prefix.pch */,
+				D9D90D000007C0 /* KakaJSON-umbrella.h */,
+				D9D90D00000790 /* KakaJSON.debug.xcconfig */,
+				D9D90D000007A0 /* KakaJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KakaJSON";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9D90D00000410 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D90D000007D0 /* KakaJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B7C191006BF7EC1267FFF618F4BA168 /* KakaJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9D90D000003D0 /* Build configuration list for PBXNativeTarget "KakaJSON" */;
+			buildPhases = (
+				D9D90D00000410 /* Headers */,
+				D9D90D00000420 /* Sources */,
+				D9D90D00000430 /* Frameworks */,
+				D9D90D00000440 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KakaJSON;
+			productName = KakaJSON;
+			productReference = 027F02060C0F3AF572FFE431F4A1DAA3 /* KakaJSON */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9D90D00000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = D9D90D00000030 /* Build configuration list for PBXProject "KakaJSON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D9D90D00000010;
+			productRefGroup = D9D90D00000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B7C191006BF7EC1267FFF618F4BA168 /* KakaJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9D90D00000440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9D90D00000420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D90D000004F0 /* Array+KJ.swift in Sources */,
+				D9D90D000005F0 /* BaseLayout.swift in Sources */,
+				D9D90D000006A0 /* BaseType.swift in Sources */,
+				D9D90D000005A0 /* ClassDescriptor.swift in Sources */,
+				D9D90D00000600 /* ClassLayout.swift in Sources */,
+				D9D90D000006B0 /* ClassType.swift in Sources */,
+				D9D90D00000570 /* Coding.swift in Sources */,
+				D9D90D00000480 /* Convertible.swift in Sources */,
+				D9D90D00000490 /* ConvertibleConfig.swift in Sources */,
+				D9D90D000004A0 /* ConvertibleEnum.swift in Sources */,
+				D9D90D00000500 /* Data+KJ.swift in Sources */,
+				D9D90D000005B0 /* Descriptor.swift in Sources */,
+				D9D90D00000510 /* Dictionary+KJ.swift in Sources */,
+				D9D90D000005C0 /* EnumDescriptor.swift in Sources */,
+				D9D90D00000610 /* EnumLayout.swift in Sources */,
+				D9D90D000006C0 /* EnumType.swift in Sources */,
+				D9D90D000005D0 /* FieldDescriptor.swift in Sources */,
+				D9D90D00000620 /* FieldList.swift in Sources */,
+				D9D90D000006D0 /* ForeignClassType.swift in Sources */,
+				D9D90D00000630 /* FunctionLayout.swift in Sources */,
+				D9D90D000006E0 /* FunctionType.swift in Sources */,
+				D9D90D00000580 /* JSON.swift in Sources */,
+				D9D90D00000520 /* JSONSerialization+KJ.swift in Sources */,
+				D9D90D00000810 /* KakaJSON-dummy.m in Sources */,
+				D9D90D000006F0 /* Kind.swift in Sources */,
+				D9D90D000004B0 /* KJ.swift in Sources */,
+				D9D90D00000640 /* Layout.swift in Sources */,
+				D9D90D000004C0 /* Logger.swift in Sources */,
+				D9D90D00000680 /* Metadata.swift in Sources */,
+				D9D90D00000700 /* MetaType.swift in Sources */,
+				D9D90D00000590 /* Model.swift in Sources */,
+				D9D90D00000710 /* ModelType.swift in Sources */,
+				D9D90D00000530 /* NSObject+KJ.swift in Sources */,
+				D9D90D00000720 /* ObjCClassType.swift in Sources */,
+				D9D90D00000540 /* Optional+KJ.swift in Sources */,
+				D9D90D00000730 /* OptionalType.swift in Sources */,
+				D9D90D00000550 /* Pointer+KJ.swift in Sources */,
+				D9D90D00000690 /* Property.swift in Sources */,
+				D9D90D00000650 /* ProtocolLayout.swift in Sources */,
+				D9D90D00000740 /* ProtocolType.swift in Sources */,
+				D9D90D00000560 /* String+KJ.swift in Sources */,
+				D9D90D000005E0 /* StructDescriptor.swift in Sources */,
+				D9D90D00000660 /* StructLayout.swift in Sources */,
+				D9D90D00000750 /* StructType.swift in Sources */,
+				D9D90D00000670 /* TupleLayout.swift in Sources */,
+				D9D90D00000760 /* TupleType.swift in Sources */,
+				D9D90D00000770 /* Type.swift in Sources */,
+				D9D90D000004D0 /* TypeProxy.swift in Sources */,
+				D9D90D000004E0 /* Values.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9D90D00000040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D9D90D00000050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D9D90D000003E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D90D000007A0 /* KakaJSON.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaJSON/KakaJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KakaJSON/KakaJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KakaJSON/KakaJSON.modulemap";
+				PRODUCT_MODULE_NAME = KakaJSON;
+				PRODUCT_NAME = KakaJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9D90D000003F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D90D00000790 /* KakaJSON.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KakaJSON/KakaJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KakaJSON/KakaJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KakaJSON/KakaJSON.modulemap";
+				PRODUCT_MODULE_NAME = KakaJSON;
+				PRODUCT_NAME = KakaJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9D90D00000030 /* Build configuration list for PBXProject "KakaJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9D90D00000040 /* Debug */,
+				D9D90D00000050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9D90D000003D0 /* Build configuration list for PBXNativeTarget "KakaJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9D90D000003F0 /* Debug */,
+				D9D90D000003E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9D90D00000000 /* Project object */;
+}

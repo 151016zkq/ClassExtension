@@ -25,24 +25,6 @@ public extension UIView {
         maskLayer.position = CGPoint(x: self.bounds.width/2 , y: self.bounds.height/2 )
         self.layer.mask = maskLayer
     }
-    
-    ///截图当前view位置的图片
-    func clip() -> UIImage? {
-        
-        UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {return nil}
-        UIGraphicsEndImageContext()
-        guard let data = UIImageJPEGRepresentation(image, 1) else {
-            return nil
-        }
-        //截取指定范围
-        return UIImage.init(data: data) //image
-
-    }
-
-    
-    
     func embellishView(redius : CGFloat)  {
         self.layer.cornerRadius = redius
         self.layer.masksToBounds = true
@@ -158,7 +140,7 @@ public extension UIView {
     
 }
 ///按钮中图片的位置枚举
-public enum ButtonImagePositionStyle {
+enum ButtonImagePositionStyle {
     ///图片在左文字在右
     case `default`
     ///图片在右文字左
@@ -169,7 +151,7 @@ public enum ButtonImagePositionStyle {
     case bottom
 
 }
-public extension UIButton {
+extension UIButton {
     func createBtnWith(imagePositionStyle: ButtonImagePositionStyle, spacing: CGFloat, imagePositionBlock: (UIButton) -> ()) {
         imagePositionBlock(self)
         switch imagePositionStyle {

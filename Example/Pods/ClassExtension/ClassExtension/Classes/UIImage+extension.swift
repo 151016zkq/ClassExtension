@@ -6,9 +6,9 @@
 //
 
 import Foundation
-public extension UIImage {
+extension UIImage {
     ///获取本地bundle中的图片
-    static func imageWith(currentClass: AnyClass, resourceBundleName: String, imageName: String) -> UIImage?{
+    public static func imageWith(currentClass: AnyClass, resourceBundleName: String, imageName: String) -> UIImage?{
         var imageName = imageName
         if UIScreen.main.scale == 3.0 && !imageName.hasSuffix("@3x") {
             imageName += "@3x"
@@ -23,6 +23,20 @@ public extension UIImage {
         let image = UIImage.init(contentsOfFile: imagePath)
         return image
 
+
+    }
+    //截取屏幕
+    class func clip(view: UIView) -> UIImage? {
+        
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {return nil}
+        UIGraphicsEndImageContext()
+        guard let data = UIImageJPEGRepresentation(image, 1) else {
+            return nil
+        }
+        //截取指定范围
+        return UIImage.init(data: data) //image
 
     }
 

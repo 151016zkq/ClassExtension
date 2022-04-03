@@ -10,18 +10,19 @@ import Foundation
 import RxSwift
 import RxCocoa
 import MJRefresh
-public class Target: NSObject, Disposable {
+class Target: NSObject, Disposable {
     private var retainSelf: Target?
     override init() {
         super.init()
         self.retainSelf = self
     }
-    public func dispose() {
+    func dispose() {
         self.retainSelf = nil
     }
 }
 
-public class MJRefreshTarget<Component: MJRefreshComponent>: Target {
+private final
+class MJRefreshTarget<Component: MJRefreshComponent>: Target {
     weak var component: Component?
     let refreshingBlock: MJRefreshComponentRefreshingBlock
 
@@ -36,13 +37,13 @@ public class MJRefreshTarget<Component: MJRefreshComponent>: Target {
         refreshingBlock()
     }
 
-    public override func dispose() {
+    override func dispose() {
         super.dispose()
         self.component?.refreshingBlock = nil
     }
 }
 
-public extension Reactive where Base: MJRefreshComponent {
+extension Reactive where Base: MJRefreshComponent {
     var refresh: ControlProperty<MJRefreshState> {
         let source: Observable<MJRefreshState> = Observable.create { [weak component = self.base] observer  in
             MainScheduler.ensureExecutingOnScheduler()
