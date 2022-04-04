@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ClassExtension'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'A short description of ClassExtension.'
 
 # This description is used to generate tags and improve search results.
