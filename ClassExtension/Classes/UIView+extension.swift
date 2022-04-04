@@ -33,7 +33,7 @@ public extension UIView {
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else {return nil}
         UIGraphicsEndImageContext()
-        guard let data = UIImageJPEGRepresentation(image, 1) else {
+        guard let data = image.jpegData(compressionQuality: 1) else {
             return nil
         }
         //截取指定范围
