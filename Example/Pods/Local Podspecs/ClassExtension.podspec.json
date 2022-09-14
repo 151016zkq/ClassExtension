@@ -1,6 +1,6 @@
 {
   "name": "ClassExtension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "summary": "A short description of ClassExtension.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/151016zkq/ClassExtension",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/151016zkq/ClassExtension.git",
-    "tag": "1.0.3"
+    "tag": "1.0.4"
   },
   "platforms": {
     "ios": "9.0"

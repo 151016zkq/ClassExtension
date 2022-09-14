@@ -1,5 +1,5 @@
 PODS:
-  - ClassExtension (1.0.3):
+  - ClassExtension (1.0.4):
     - KakaJSON (~> 1.1.2)
     - MJRefresh (~> 3.1.15.3)
     - RxCocoa (~> 5.0)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ClassExtension: 7d586a19fd9a59645a433e551a806f72abdb377c
+  ClassExtension: 4efeb11bbf549c65fb56bdc49a41abced01853c0
   KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354

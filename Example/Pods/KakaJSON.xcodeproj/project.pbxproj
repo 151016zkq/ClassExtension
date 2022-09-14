@@ -275,8 +275,8 @@
 		D9D90D00000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = D9D90D00000030 /* Build configuration list for PBXProject "KakaJSON" */;
 			compatibilityVersion = "Xcode 3.2";

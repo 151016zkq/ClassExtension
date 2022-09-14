@@ -164,8 +164,8 @@
 		7943B600000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 7943B600000030 /* Build configuration list for PBXProject "RxRelay" */;
 			compatibilityVersion = "Xcode 3.2";

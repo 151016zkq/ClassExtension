@@ -226,8 +226,8 @@
 		8523EE00000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 8523EE00000030 /* Build configuration list for PBXProject "ClassExtension" */;
 			compatibilityVersion = "Xcode 3.2";

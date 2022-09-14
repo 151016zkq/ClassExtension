@@ -25,24 +25,6 @@ public extension UIView {
         maskLayer.position = CGPoint(x: self.bounds.width/2 , y: self.bounds.height/2 )
         self.layer.mask = maskLayer
     }
-    
-    ///截图当前view位置的图片
-    func clip() -> UIImage? {
-        
-        UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0.0)
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {return nil}
-        UIGraphicsEndImageContext()
-        guard let data = image.jpegData(compressionQuality: 1) else {
-            return nil
-        }
-        //截取指定范围
-        return UIImage.init(data: data) //image
-
-    }
-
-    
-    
     func embellishView(redius : CGFloat)  {
         self.layer.cornerRadius = redius
         self.layer.masksToBounds = true
@@ -158,7 +140,7 @@ public extension UIView {
     
 }
 ///按钮中图片的位置枚举
-public enum ButtonImagePositionStyle {
+enum ButtonImagePositionStyle {
     ///图片在左文字在右
     case `default`
     ///图片在右文字左
@@ -169,7 +151,7 @@ public enum ButtonImagePositionStyle {
     case bottom
 
 }
-public extension UIButton {
+extension UIButton {
     func createBtnWith(imagePositionStyle: ButtonImagePositionStyle, spacing: CGFloat, imagePositionBlock: (UIButton) -> ()) {
         imagePositionBlock(self)
         switch imagePositionStyle {
@@ -243,21 +225,130 @@ extension UIStackView {
 }
 
 
+struct UiViewLayoutConstraint {
+    static var leading: String = "leading"
+    static var trailing: String = "trailing"
+    static var left: String = "left"
+    static var right: String = "right"
 
+    
+    
+    static var top: String = "top"
+    static var bottom: String = "bottom"
+
+    static var width: String = "width"
+
+    static var height: String = "height"
+
+    static var centerX: String = "centerX"
+
+    static var centerY: String = "centerY"
+
+}
 public extension UIView {
+    
+    var leadinglayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.leading, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.leading) as! NSLayoutConstraint
+        }
+    }
+    var trailinglayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.trailing, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.trailing) as! NSLayoutConstraint
+        }
+    }
+
+    var leftlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.left, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.left) as! NSLayoutConstraint
+        }
+    }
+    var rightlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.right, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.right) as! NSLayoutConstraint
+        }
+    }
+
+    var toplayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.top, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.top) as! NSLayoutConstraint
+        }
+    }
+
+    var bottomlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.bottom, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.bottom) as! NSLayoutConstraint
+        }
+    }
+
+    var widthlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.width, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.width) as! NSLayoutConstraint
+        }
+    }
+
+    var heightlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.height, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.height) as! NSLayoutConstraint
+        }
+    }
+
+    var centerXlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.centerX, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.centerX) as! NSLayoutConstraint
+        }
+    }
+
+    var centerYlayoutConstraint: NSLayoutConstraint {
+        set {
+            objc_setAssociatedObject(self, &UiViewLayoutConstraint.centerY, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            objc_getAssociatedObject(self, &UiViewLayoutConstraint.centerY) as! NSLayoutConstraint
+        }
+    }
+
+    
+    
     @available(iOS 9.0, *)
     func leading(anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>,equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.leadingAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.leadinglayoutConstraint = self.leadingAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.leadingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.leadinglayoutConstraint = self.leadingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.leadingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.leadinglayoutConstraint = self.leadingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.leadinglayoutConstraint.isActive = true
     }
 
     
@@ -266,14 +357,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.trailingAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.trailinglayoutConstraint = self.trailingAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.trailinglayoutConstraint = self.trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.trailingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.trailinglayoutConstraint = self.trailingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.trailinglayoutConstraint.isActive = true
     }
     
     @available(iOS 9.0, *)
@@ -281,14 +371,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.leftAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.leftlayoutConstraint = self.leftAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.leftAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.leftlayoutConstraint =  self.leftAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.leftAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.leftlayoutConstraint =  self.leftAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.leftlayoutConstraint.isActive = true;
     }
     @available(iOS 9.0, *)
     func leftEqual(anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) {
@@ -316,14 +405,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.rightAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.rightlayoutConstraint = self.rightAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.rightAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.rightlayoutConstraint = self.rightAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.rightAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.rightlayoutConstraint = self.rightAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.rightlayoutConstraint.isActive = true
     }
     
     @available(iOS 9.0, *)
@@ -337,14 +425,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.topAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.toplayoutConstraint = self.topAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.topAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.toplayoutConstraint = self.topAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.toplayoutConstraint = self.topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.toplayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func topSuperView(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
@@ -358,14 +445,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.bottomAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.bottomlayoutConstraint = self.bottomAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.bottomAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.bottomlayoutConstraint = self.bottomAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.bottomlayoutConstraint = self.bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.bottomlayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func bottomSuperView(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
@@ -383,14 +469,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.centerYlayoutConstraint = self.centerYAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.centerYAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.centerYlayoutConstraint = self.centerYAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.centerYAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.centerYlayoutConstraint = self.centerYAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.centerYlayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func centerYEuqal(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) {
@@ -411,14 +496,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+            self.centerXlayoutConstraint = self.centerXAnchor.constraint(equalTo: anchor, constant: constant)
         case .less:
-            self.centerXAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+            self.centerXlayoutConstraint = self.centerXAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         case .grather:
-            self.centerXAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
-        default:
-            break
+            self.centerXlayoutConstraint = self.centerXAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
         }
+        self.centerXlayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func centerXSuperView(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
@@ -432,14 +516,13 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+            self.widthlayoutConstraint = self.widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
         case .less:
-            self.widthAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+            self.widthlayoutConstraint = self.widthAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         case .grather:
-            self.widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant).isActive = true
-        default:
-            break
+            self.widthlayoutConstraint = self.widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         }
+        self.widthlayoutConstraint.isActive = true
     }
 
     @available(iOS 9.0, *)
@@ -447,52 +530,51 @@ public extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+            self.heightlayoutConstraint = self.heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
         case .less:
-            self.heightAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+            self.heightlayoutConstraint = self.heightAnchor.constraint(lessThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         case .grather:
-            self.heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant).isActive = true
-        default:
-            break
+            self.heightlayoutConstraint = self.heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constant)
         }
+        self.heightlayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func heightConstant(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.heightAnchor.constraint(equalToConstant: constant).isActive = true
+            self.heightlayoutConstraint = self.heightAnchor.constraint(equalToConstant: constant)
         case .less:
-            self.heightAnchor.constraint(lessThanOrEqualToConstant: constant).isActive = true
+            self.heightlayoutConstraint = self.heightAnchor.constraint(lessThanOrEqualToConstant: constant)
         case .grather:
-            self.heightAnchor.constraint(greaterThanOrEqualToConstant: constant).isActive = true
-        default:
-            break
+            self.heightlayoutConstraint = self.heightAnchor.constraint(greaterThanOrEqualToConstant: constant)
         }
+        self.heightlayoutConstraint.isActive = true
     }
     @available(iOS 9.0, *)
     func heightEqualConstant(constant: CGFloat) {
         self.heightConstant(equalType: .equal, constant: constant)
     }
 
-    @available(iOS 9.0, *)
-    func widthConstant(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) {
+    @available(iOS 9.0, *) @discardableResult
+    func widthConstant(equalType:NSLayoutEqualType = .equal, constant: CGFloat = 0) -> Self {
         self.translatesAutoresizingMaskIntoConstraints = false
         switch equalType {
         case .equal:
-            self.widthAnchor.constraint(equalToConstant: constant).isActive = true
+            self.widthlayoutConstraint = self.widthAnchor.constraint(equalToConstant: constant)
         case .less:
-            self.widthAnchor.constraint(lessThanOrEqualToConstant: constant).isActive = true
+            self.widthlayoutConstraint = self.widthAnchor.constraint(lessThanOrEqualToConstant: constant)
         case .grather:
-            self.widthAnchor.constraint(greaterThanOrEqualToConstant: constant).isActive = true
-        default:
-            break
+            self.widthlayoutConstraint = self.widthAnchor.constraint(greaterThanOrEqualToConstant: constant)
         }
+        self.widthlayoutConstraint.isActive = true
+        return self
     }
     
-    @available(iOS 9.0, *)
-    func widthEqualConstant(constant: CGFloat = 0) {
+    @available(iOS 9.0, *) @discardableResult
+    func widthEqualConstant(constant: CGFloat = 0) -> Self {
         self.widthConstant(equalType: .equal, constant: constant)
+        return self
     }
 
     

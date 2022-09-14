@@ -279,8 +279,8 @@
 		331F5F00000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 331F5F00000030 /* Build configuration list for PBXProject "MJRefresh" */;
 			compatibilityVersion = "Xcode 3.2";
